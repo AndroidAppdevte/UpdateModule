@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/dialog_update_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/background_update_dialog" />
+
+        <ImageView
+            android:id="@+id/dialog_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/dialog_update_img"
+            android:layout_alignTop="@+id/dialog_update_img"
+            android:layout_marginTop="@dimen/dp_30"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_cancel_white" />
+
+        <LinearLayout
+            android:id="@+id/dialog_update_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_update_img"
+            android:background="@drawable/background_update_dialog"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="发现新版本"
+                android:textColor="#333333"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dialog_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_34"
+                android:layout_marginRight="@dimen/dp_34"
+                android:layout_marginTop="@dimen/dp_8"
+                android:lineSpacingExtra="@dimen/dp_10"
+                android:paddingBottom="10dp"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+
+            <LinearLayout
+                android:id="@+id/lin_pro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:orientation="horizontal"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_4"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:max="100"
+                    android:progressDrawable="@drawable/update_progress_drawable" />
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="0 %"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dialog_sure"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/background_red_solid_circle"
+                android:gravity="center"
+                android:text="立即升级"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
