@@ -8,8 +8,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.scqkzqtz.librarybase.utils.PreferenceUtils;
 import com.scqkzqtz.update.R;
-import com.scqkzqtz.update.utils.PreferenceUtils;
 import com.vector.update_app.UpdateAppBean;
 import com.vector.update_app.UpdateAppManager;
 import com.vector.update_app.service.DownloadService;

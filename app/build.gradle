@@ -36,4 +36,6 @@ dependencies {
     compile('com.yanzhenjie:permission:2.0.0-rc10') {
         exclude group: 'com.android.support'
     }
+
+    compile 'com.scqkzqtz:baselibrary:1.0.1'
 }
